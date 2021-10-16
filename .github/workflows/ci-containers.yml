@@ -19,10 +19,10 @@ jobs:
           echo "CHANGED_FILES=$(git diff --name-only ${{ github.event.before }}..${{ github.event.after }})" >> $GITHUB_ENV
           echo "::set-output name=all::$(git diff --name-only --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }})"
           echo "::set-output name=ts::$(git diff --name-only --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep .ts$)"
-  lint:  
-    needs:  changed_files
-    if: ${{needs.changed_files.outputs.all}}
-    steps:
-      - name: echo changed files
-        run: echo ${{needs.changedfiles.outputs.ts}}
+    lint:  
+      needs:  changed_files
+      if: ${{needs.changed_files.outputs.all}}
+      steps:
+        - name: echo changed files
+          run: echo ${{needs.changedfiles.outputs.ts}}
 
