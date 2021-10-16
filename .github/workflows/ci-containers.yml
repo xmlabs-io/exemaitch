@@ -26,5 +26,5 @@ jobs:
     if: ${{needs.changed_files.outputs.all}}
     steps:
       - name: echo changed files
-        run: echo ${{needs.changedfiles.outputs.ts}}
+        run: echo ${{needs.changed_files.outputs.all}}
 
