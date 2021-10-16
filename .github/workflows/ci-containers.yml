@@ -1,6 +1,7 @@
 name:  Create and Push Docker Images
 
 on:
+  workflow_dispatch:
   push: 
     branches: 
       - '*'
