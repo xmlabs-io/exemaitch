@@ -25,6 +25,10 @@ jobs:
     needs:  changed_files
     #if: ${{needs.changed_files.outputs.all}}
     steps:
+      - name:  Checkout 
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: echo changed files
         run: echo ${{needs.changed_files.outputs.all}}
       - name: Hello world action step
