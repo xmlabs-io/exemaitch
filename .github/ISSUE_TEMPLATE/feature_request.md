@@ -10,9 +10,6 @@ assignees: ''
 ## Summary
 [required - When < situation>, we want < motivation > so that < expected outcome>]
 
-### User/Job Story
-[required - When < situation>, we want < motivation > so that < expected outcome>]
-
 ### Relevant Context
 [optional - links to tickets, docs, etc]
 
