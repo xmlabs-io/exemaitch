@@ -3,9 +3,6 @@ name:  Create and Push Docker Images
 on:
   workflow_dispatch:
   pull_request:
-  push: 
-    branches: 
-      - '*'
 
 jobs:
   changed_files:
@@ -17,6 +14,8 @@ jobs:
           fetch-depth: 0
       - name:  Changed Files
         id: changed_files
+        outputs:
+        all: ${{ steps.changed_files.outputs.all }}
         run: |
           echo "::set-output name=all::$(git diff --name-only --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }})"
           echo "::set-output name=ts::$(git diff --name-only --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep .ts$)"
