@@ -1,0 +1,15 @@
+[flake8]
+exclude =
+  .git,
+  __pycache__,
+  env,
+  venv,
+  .venv,
+  **/migrations/**.py
+# TODO: Reduce to 10 and fix the complex code that comes up
+max-complexity = 45
+count = True
+
+# matches black settings
+max-line-length = 120
+
