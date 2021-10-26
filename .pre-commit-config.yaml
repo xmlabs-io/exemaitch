@@ -3,11 +3,9 @@ repos:
     rev: v4.0.1  # Use the ref you want to point at
     hooks:
       - id: trailing-whitespace
-      - id: detect-aws-credentials
+      #- id: detect-aws-credentials
       - id: check-symlinks
-      - id: check-yaml
       - id: check-merge-conflict
-      - id: check-json
       - id: check-docstring-first
       - id: check-executables-have-shebangs
       - id: check-builtin-literals
