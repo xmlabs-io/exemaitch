@@ -21,6 +21,9 @@ RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requ
 
 RUN npm install -g aws-cdk
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/awscliv2.zip"
-RUN unzip /tmp/awscliv2.zip -d /tmp
+RUN unzip -qq /tmp/awscliv2.zip -d /tmp
 RUN sudo /tmp/aws/install
 RUN sudo rm -rf /tmp/aws /tmp/awscliv2.zip
+RUN su - vscode -c "mkdir -p /tmp/pre-commit-init"
+COPY .pre-commit-config.yaml /tmp/pre-commit-init/
+RUN  su - vscode -c "cd /tmp/pre-commit-init && git init && pre-commit install --install-hooks"
