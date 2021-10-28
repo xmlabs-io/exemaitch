@@ -31,6 +31,6 @@
 	"features": {
 		"github": "latest"
 	},
-	"postAttachCommand": "pre-commit install", // ; pre-commit",
-	"remoteUser": "vscode"
+	//"postAttachCommand": "pre-commit install", // ; pre-commit",
+	"remoteUser": "codespace"
 }
