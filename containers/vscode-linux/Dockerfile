@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/vscode/devcontainers/universal:linux
 
-COPY containers/vscode/requirements.txt /tmp/pip-tmp/
+COPY containers/vscode-linux/requirements.txt /tmp/pip-tmp/
 RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt
 #RUN rm -rf /tmp/pip-tmp
 
