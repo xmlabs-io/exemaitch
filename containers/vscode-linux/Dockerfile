@@ -11,5 +11,4 @@ RUN sudo /tmp/aws/install
 RUN sudo su - -c "rm -rf /tmp/aws /tmp/awscliv2.zip"
 RUN sudo su - codespace -c "mkdir -p /tmp/pre-commit-init"
 COPY .pre-commit-config.yaml /tmp/pre-commit-init/
-COPY ./.pre-commit-config.yaml /tmp/pre-commit-init/
 RUN sudo su - codespace -c "cd /tmp/pre-commit-init && git init && pre-commit install --install-hooks"
