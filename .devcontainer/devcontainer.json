@@ -1,10 +1,9 @@
 {
-	"name": "Python 3",
+	"name": "Exemaitch VScode Linux",
 	"build": {
-		"dockerfile": "../containers/vscode/Dockerfile",
+		"dockerfile": "../containers/vscode-linux/Dockerfile",
 		"context": "..",
 		"args": {
-			"VARIANT": "3.9",
 			"NODE_VERSION": "lts/*"
 		}
 	},
@@ -31,6 +30,6 @@
 	"features": {
 		"github": "latest"
 	},
-	//"postAttachCommand": "pre-commit install", // ; pre-commit",
+	"postAttachCommand": "pre-commit install",
 	"remoteUser": "codespace"
 }
