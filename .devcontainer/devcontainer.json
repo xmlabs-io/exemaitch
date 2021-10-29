@@ -1,7 +1,8 @@
 {
 	"name": "Exemaitch VScode Linux",
 	"build": {
-		"dockerfile": "../containers/vscode-linux/Dockerfile",
+		//"dockerfile": "../containers/vscode-linux/Dockerfile",
+		"dockerfile": "Dockerfile",
 		"context": "..",
 		"args": {
 			"NODE_VERSION": "lts/*"
