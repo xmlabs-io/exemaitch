@@ -9,6 +9,7 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/aws
 RUN unzip -qq /tmp/awscliv2.zip -d /tmp
 RUN sudo /tmp/aws/install
 RUN sudo su - -c "rm -rf /tmp/aws /tmp/awscliv2.zip"
+RUN sudo su - -c "ls -latr"
 RUN sudo su - codespace -c "mkdir -p /tmp/pre-commit-init"
 #COPY [".pre-commit-config.yaml", "/tmp/pre-commit-init/.pre-commit-config.yaml"]
 #RUN sudo su - codespace -c "cd /tmp/pre-commit-init && git init && pre-commit install --install-hooks"
