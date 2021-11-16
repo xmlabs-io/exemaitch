@@ -43,5 +43,3 @@ To run `black`, fixing issues:
 ```shell script
 $ black .
 ```
-
-
