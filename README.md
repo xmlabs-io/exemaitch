@@ -1,4 +1,5 @@
 # exemaitch
+[![Create and publish a Docker image](https://github.com/xmlabs-io/exemaitch/actions/workflows/build-vscode-linux.yml/badge.svg)](https://github.com/xmlabs-io/exemaitch/actions/workflows/build-vscode-linux.yml)
 
 ## Code Quailty
 ### Pre-commit
