@@ -20,6 +20,6 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - uses: psf/black@stable
         with:
-          options: "--check --verbose"
+          options: "--check --verbose -l 120"
           src: "."
           version: "21.5b1"
