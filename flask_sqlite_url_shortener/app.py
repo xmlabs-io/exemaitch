@@ -47,15 +47,11 @@ def url_redirect(id):
     original_id = hashids.decode(id)
     if original_id:
         original_id = original_id[0]
-        url_data = conn.execute(
-            "SELECT original_url, clicks FROM urls" " WHERE id = (?)", (original_id,)
-        ).fetchone()
+        url_data = conn.execute("SELECT original_url, clicks FROM urls" " WHERE id = (?)", (original_id,)).fetchone()
         original_url = url_data["original_url"]
         clicks = url_data["clicks"]
 
-        conn.execute(
-            "UPDATE urls SET clicks = ? WHERE id = ?", (clicks + 1, original_id)
-        )
+        conn.execute("UPDATE urls SET clicks = ? WHERE id = ?", (clicks + 1, original_id))
 
         conn.commit()
         conn.close()
@@ -68,9 +64,7 @@ def url_redirect(id):
 @app.route("/stats")
 def stats():
     conn = get_db_connection()
-    db_urls = conn.execute(
-        "SELECT id, created, original_url, clicks FROM urls"
-    ).fetchall()
+    db_urls = conn.execute("SELECT id, created, original_url, clicks FROM urls").fetchall()
     conn.close()
 
     urls = []
