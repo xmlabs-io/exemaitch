@@ -2,6 +2,7 @@
 [![Create and publish a Docker image](https://github.com/xmlabs-io/exemaitch/actions/workflows/build-vscode-linux.yml/badge.svg)](https://github.com/xmlabs-io/exemaitch/actions/workflows/build-vscode-linux.yml)
 
 ## Code Quailty
+
 ### Pre-commit
 
 This project uses [pre-commit](https://pre-commit.com/) to automatically run `mypy`, `black` and `flake8` before commits.
