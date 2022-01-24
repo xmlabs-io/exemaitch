@@ -1,1 +1,1 @@
-FROM ghcr.io/xmlabs-io/exemaitch:main
+FROM mcr.microsoft.com/vscode/devcontainers/universal:linux
