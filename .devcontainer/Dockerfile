@@ -1,1 +1,1 @@
-FROM ghcr.io/xmlabs-io/exemaitch:feature-development_docker_container
+FROM ghcr.io/xmlabs-io/exemaitch:main
