@@ -5,9 +5,12 @@
 
 name: Create and publish a Docker image
 
-on: [push]#, pull_request]
-  #push:
-    #branches: ['r']
+on:
+  push:
+    paths:
+      - 'containers/vscode-linux/**'
+      - '.pre-commit-config.yaml'
+      - '.github/workflows/build-vscode-linux.yml'
 
 env:
   REGISTRY: ghcr.io
@@ -40,8 +43,6 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
-          #driver-opts: image=moby/buildkit:0.9.1
-          #context: containers/vscode-linux
           file: containers/vscode-linux/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
